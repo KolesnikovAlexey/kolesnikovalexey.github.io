@@ -1,6 +1,6 @@
 .block1 { 
  width: 10%; 
- background: #ff0000;
+ background: #ffff00;
  float: left;
  padding-top:10px;
  padding-bottom:10px;
@@ -8,7 +8,7 @@
 }
 .block2 { 
  width: 10%; 
- background: #000000;
+ background: #008000;
  float: left;  
  padding-top:10px;
  padding-bottom:10px;
