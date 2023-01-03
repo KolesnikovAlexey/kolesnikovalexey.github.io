@@ -1,6 +1,7 @@
-body {
-    background-color: #969c92
+element.style {
+    background-color: #969c92;
 }
+
 .block1 { 
  width: 10%; 
  background: #ffff00;
@@ -9,6 +10,7 @@ body {
  padding-bottom:10px;
  text-align: center;
 }
+
 .block2 { 
  width: 10%; 
  background:  #008000;
