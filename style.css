@@ -1,5 +1,6 @@
-body: background-color: #969c92
-
+main {
+    background-color: #969c92
+}
 .block1 { 
  width: 10%; 
  background: #ffff00;
