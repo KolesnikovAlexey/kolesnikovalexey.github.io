@@ -1,15 +1,16 @@
 .block1 { 
  width: 10%; 
- background: #ffff00;
+ background: #008000;
  float: left;
  padding-top:10px;
  padding-bottom:10px;
  text-align: center;
  radius: 4px;
+ color: white;
 }
 .block2 { 
  width: 10%; 
- background: #008000;
+ background: #ffff00;
  float: left;  
  padding-top:10px;
  padding-bottom:10px;
