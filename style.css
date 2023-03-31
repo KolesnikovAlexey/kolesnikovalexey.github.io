@@ -27,3 +27,6 @@ body {
   background: #D0F123;
 }
 
+.block1:hover {
+    color: red;
+}
