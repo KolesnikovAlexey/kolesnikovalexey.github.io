@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #969c92;
 }
 
@@ -29,4 +29,37 @@ body {
 
 .block1:hover {
     color: red;
+} */
+
+body {
+  background-color: #969c92;
+}
+
+.block1 {
+  width: 10%;
+  background-color: #ffff00;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.block2 {
+  width: 10%;
+  background-color: #008000;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.block3 {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #D0F123;
+}
+
+.block1:hover {
+  color: red;
 }
