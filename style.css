@@ -30,6 +30,7 @@
 .block1:hover {
     color: red;
 } */
+import 'animate.css';
 
 body {
   background-color: #969c92;
