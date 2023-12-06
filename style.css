@@ -70,6 +70,5 @@ body {
     font-weight: 700;
     padding: 8px 12px;
     cursor: pointer;
-    min-width: 100px;
-    font-weight: 700;
+    min-width: 100px
 }
