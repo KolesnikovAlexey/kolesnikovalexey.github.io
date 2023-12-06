@@ -69,4 +69,6 @@ body {
     border-radius: 5px;
     font-weight: 700;
     padding: 8px 12px;
+    cursor: pointer;
+    min-width: 190px
 }
