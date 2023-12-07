@@ -72,3 +72,87 @@ body {
     cursor: pointer;
     min-width: 100px
 }
+/* Общие стили кнопки */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стили для обычной кнопки */
+.button.default {
+  background-color: #3498db;
+  color: #fff;
+  border: 2px solid #3498db;
+}
+
+.button.default:hover {
+  background-color: #2980b9;
+}
+
+/* Стили для кнопки с тенью */
+.button.shadow {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.4);
+}
+
+.button.shadow:hover {
+  background-color: #27ae60;
+}
+
+/* Стили для кнопки с градиентом */
+.button.gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+}
+
+.button.gradient:hover {
+  background: linear-gradient(to right, #ff5e62, #fb8c00);
+}
+
+/* Стили для выпуклой кнопки */
+.button.convex {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  position: relative;
+}
+
+.button.convex:hover {
+  background-color: #c0392b;
+}
+
+.button.convex:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  background: linear-gradient(to bottom, #c0392b, #e74c3c);
+  border-radius: 5px;
+}
+
+/* Дополнительные стили по желанию */
+.button.rounded {
+  border-radius: 50px;
+}
+
+.button.small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.button.large {
+  font-size: 20px;
+  padding: 14px 28px;
+}
+
