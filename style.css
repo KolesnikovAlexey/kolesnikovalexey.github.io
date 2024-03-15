@@ -54,11 +54,11 @@ body {
   color: #ffffff;
 }
 
-/*.block3 {
+.block3 {
   width: 70%;
   margin: 0 auto;
   background-color: #D0F123;
-}*/
+}
 
 .block1:hover {
   color: red;
