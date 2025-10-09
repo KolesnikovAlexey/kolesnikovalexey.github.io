@@ -67,14 +67,23 @@
 	
 	<div class="block3">
 		<div><h1 style="color:red"><center>1 page</center><h1></div>
-		        <button class="button large" id="my_form">Большая кнопка</button>
-			    <button onclick="window.SP_PIN.fireEvent('New event 2025-08-20')">Buy</button>
-			<button onclick="window.SP_PIN.fireEvent(
-  'New event 2025-10-07',
-  {
-    test: 'test'
-  }
-)">Buy</button>
+	    <button class="button large" id="my_form">Большая кнопка</button>
+			
+		<!-- Кнопка с простым событием -->
+<button onclick="window.SP_PIN.fireEvent('button_purchase')">
+    Купить сейчас
+</button>
+
+<!-- Кнопка с событием и переменными -->
+<button onclick="window.SP_PIN.fireEvent('product_view', {product_id: 'laptop-123', price: 999})">
+    Посмотреть товар
+</button>
+
+<!-- Ссылка с отслеживанием -->
+<a href="/contact" onclick="window.SP_PIN.fireEvent('contact_click')">
+    Связаться с нами
+</a>	    
+ 
 		<p>Adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
 			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
