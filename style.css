@@ -166,21 +166,23 @@ body {
   cursor: pointer;
 }
 
-/* сам тултип */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 140px;
+  width: 150px;
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
-  padding: 6px 8px;
+  border-radius: 8px;
+  padding: 8px 10px;
   position: absolute;
-  bottom: 125%;
+  bottom: 130%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
+  font-family: 'Tektur', sans-serif;
+  font-size: 14px;
+}
 
 /* 👇 создаем "язычок" */
 .tooltip .tooltiptext::after {
@@ -194,13 +196,9 @@ body {
   border-color: #333 transparent transparent transparent;
 }
 
-  /* 👇 добавляем шрифт Tektur */
-  font-family: 'Tektur', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
+/* появление с плавным движением вверх */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }
