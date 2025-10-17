@@ -1,3 +1,6 @@
+/* Подключённый шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;600&display=swap');
+
 /* body {
     background-color: #969c92;
 }
@@ -163,6 +166,7 @@ body {
   cursor: pointer;
 }
 
+/* сам тултип */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 140px;
@@ -172,18 +176,19 @@ body {
   border-radius: 6px;
   padding: 6px 8px;
   position: absolute;
-  bottom: 125%; /* расположение над элементом */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-
- /* изначально скрыт */
   opacity: 0;
-  
-  /* добавляем плавный переход */
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+
+  /* 👇 добавляем шрифт Tektur */
+  font-family: 'Tektur', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
-/* при наведении */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
