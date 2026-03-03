@@ -203,3 +203,43 @@ body {
   transform: translateX(-50%) translateY(-5px);
 }
 
+.mini-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 280px;
+}
+
+.mini-form input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.mini-form input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.mini-form button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.mini-form button:hover {
+    background-color: #4338ca;
+}
+
+.mini-form button:active {
+    transform: scale(0.97);
+}
+
