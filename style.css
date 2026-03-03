@@ -243,3 +243,6 @@ body {
     transform: scale(0.97);
 }
 
+.mini-form form {
+    margin-top: 16px;
+}
