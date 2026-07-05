@@ -37,6 +37,9 @@
   <label>chatbots_channel
     <input id="channel" value="tg">
   </label>
+  <label>message
+    <input id="message" value="">
+  </label>
   <button onclick="sendEvent()">Send A360 Event</button>
   <div id="result"></div>
   <script>
@@ -48,7 +51,8 @@
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         chatbots_subscriber_id: document.getElementById('subscriberId').value,
-        chatbots_channel: document.getElementById('channel').value
+        chatbots_channel: document.getElementById('channel').value,
+        message: document.getElementById('message').value
       };
       var resultEl = document.getElementById('result');
       resultEl.style.display = 'block';
