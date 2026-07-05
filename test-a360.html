@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A360 Event Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    h1 { font-size: 20px; }
+    label { display: block; margin-top: 12px; font-size: 14px; color: #333; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    button { margin-top: 20px; padding: 10px 24px; background: #2943D1; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; }
+    button:hover { background: #1f33a8; }
+    #result { margin-top: 20px; padding: 12px; background: #f4f4f4; border-radius: 4px; font-size: 13px; white-space: pre-wrap; display: none; }
+    #result.success { border-left: 4px solid #28a745; }
+    #result.error { border-left: 4px solid #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>A360 Event Trigger Test</h1>
+  <p style="font-size:13px;color:#666;">Sends a POST request to the A360 event endpoint without any authorization or cookies.</p>
+  <label>Event ID
+    <input id="eventId" value="c45ca7899005462f8f7ffa6df351be65">
+  </label>
+  <label>Account ID
+    <input id="accountId" value="8181770">
+  </label>
+  <label>Email
+    <input id="email" value="billybones.sp@gmail.com">
+  </label>
+  <label>Phone
+    <input id="phone" value="+380683183712">
+  </label>
+  <label>chatbots_subscriber_id
+    <input id="subscriberId" value="6a325927dd151a668b03e351">
+  </label>
+  <label>chatbots_channel
+    <input id="channel" value="tg">
+  </label>
+  <button onclick="sendEvent()">Send A360 Event</button>
+  <div id="result"></div>
+  <script>
+    function sendEvent() {
+      var eventId = document.getElementById('eventId').value;
+      var accountId = document.getElementById('accountId').value;
+      var url = 'https://events.sendpulse.com/events/id/' + eventId + '/' + accountId;
+      var body = {
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        chatbots_subscriber_id: document.getElementById('subscriberId').value,
+        chatbots_channel: document.getElementById('channel').value
+      };
+      var resultEl = document.getElementById('result');
+      resultEl.style.display = 'block';
+      resultEl.className = '';
+      resultEl.textContent = 'Sending...';
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+      .then(function(r) { return r.text().then(function(text) { return { status: r.status, text: text }; }); })
+      .then(function(r) {
+        resultEl.className = r.status === 200 ? 'success' : 'error';
+        resultEl.textContent = 'Status: ' + r.status + '\nResponse: ' + r.text + '\n\nURL: ' + url + '\nBody: ' + JSON.stringify(body, null, 2);
+      })
+      .catch(function(err) {
+        resultEl.className = 'error';
+        resultEl.textContent = 'Error: ' + err.message;
+      });
+    }
+  </script>
+</body>
+</html>
