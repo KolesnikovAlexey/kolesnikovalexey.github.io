@@ -15,11 +15,20 @@
       <description>Base item, published before autoposting was connected.</description>
     </item>
 
-    <!-- Запись 2: добавить ПОСЛЕ просрочки тарифа (раскомментировать, обновить pubDate на текущее время)
+    <!-- Запись 2 (КОНТРОЛЬ, тариф АКТИВЕН): должна прийти подписчикам -->
     <item>
-      <title>qa 74789 rss item 2 (tariff expired)</title>
+      <title>qa 74789 rss item 2 (control, tariff active)</title>
       <link>https://kolesnikovalexey.github.io/?rss=2</link>
-      <guid isPermaLink="false">qa-74789-rss-2</guid>
+      <guid isPermaLink="false">qa-74789-rss-2-control</guid>
+      <pubDate>Thu, 22 Oct 2026 13:55:00 +0000</pubDate>
+      <description>Control item while the tariff is active. Must be sent.</description>
+    </item>
+
+    <!-- Запись 3: добавить ПОСЛЕ просрочки тарифа (раскомментировать, обновить pubDate на текущее время)
+    <item>
+      <title>qa 74789 rss item 3 (tariff expired)</title>
+      <link>https://kolesnikovalexey.github.io/?rss=3</link>
+      <guid isPermaLink="false">qa-74789-rss-3</guid>
       <pubDate>Thu, 22 Oct 2026 14:00:00 +0000</pubDate>
       <description>New item after the tariff expired. Must NOT be sent.</description>
     </item>
